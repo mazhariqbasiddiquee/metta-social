@@ -20,7 +20,7 @@ function App() {
       for(let i=1;i<=length;i++){
            arr.push(i)
       }
-
+         curr_change(1)
       change_count_button(arr)
       console.log(curr,"**",data.length)
       let init = (curr-1)*20;
