@@ -20,7 +20,7 @@ function App() {
       for(let i=1;i<=length;i++){
            arr.push(i)
       }
-         curr_change(1)
+        
       change_count_button(arr)
       console.log(curr,"**",data.length)
       let init = (curr-1)*20;
@@ -37,7 +37,7 @@ function App() {
   },[curr])
 
  const  Handlesubmit=()=>{
- 
+  
   let url=currency1===""?"https://restcountries.com/v3.1/all":`https://restcountries.com/v3.1/currency/${currency1}`
   fetch(url)
   .then((res)=>res.json())
@@ -54,12 +54,20 @@ function App() {
       for(let i=1;i<=length;i++){
            arr.push(i)
       }
-
+      
       change_count_button(arr)
-      let init = (curr-1)*20;
+      if(data.length<=20){
+        change_data(data)
+
+      }
+      else{
+        let init = (curr-1)*20;
       let final = curr*20;
       data = data.slice(init, final);
       change_data(data)
+
+      }
+      
     }
   
   })
