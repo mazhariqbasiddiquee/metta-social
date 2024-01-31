@@ -51,8 +51,9 @@ function App() {
   return (
     <div>
       <h1 style={{ textAlign: 'center' }}>World by Currency</h1>
-      <div style={{ textAlign: 'center',minWidth:"150px" }}>
+      <div style={{ textAlign: 'center' }}>
         <input
+        
           className="input"
           type="text"
           placeholder="Enter currency name to search"
@@ -77,11 +78,11 @@ function App() {
           })
         )}
       </div>
-      <div className="button">
+      <div className="button-div">
         {total.map((elem) => (
           <button
             key={elem}
-            style={{ marginLeft: '10px', width: '30px' }}
+            className='button'
             onClick={() => {
               set_Current_Page(elem);
             }}

@@ -6,14 +6,29 @@
   margin: auto;
 }
 
-.button{
-  display:flex;
-  justify-content:center;
-  margin-bottom:50px;
-  width: 100%;
+.button-div {
+  display: flex;
+ 
+  align-items: center;
+  margin-bottom: 50px;
+  width: 80%;
+  height: 300px;
+  flex-wrap: wrap;
+
   box-sizing: border-box;
 }
 
+.button {
+  display: flex;
+ 
+  width: fit-content; 
+  margin-right: 3px; 
+}
+
+
+.image{
+  width: 80%;
+}
 .input{
    width:20%;
    min-width: 200px;
@@ -25,8 +40,8 @@
     grid-template-columns: repeat(1,1fr);
   }
   .button{
-    width: 70%;
-   margin-left: 10%;
+    width: 70vw;
+   
   }
 }
 
